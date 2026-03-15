@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+  
+  --color-primary: #6366F1;
+  --color-secondary: #22C55E;
+  --color-accent: #F43F5E;
+  
+  --color-surface: var(--surface);
+  --color-app-bg: var(--app-bg);
+  --color-app-text: var(--app-text);
+  --color-app-border: var(--app-border);
+  
+  --color-text-dark: #E5E7EB;
+  --color-text-light: #1F2937;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --app-bg: #FFFFFF;
+  --app-text: #111827;
+  --surface: #F3F4F6;
+  --app-border: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+}
+
+.dark {
+  --app-bg: #0B0F19;
+  --app-text: #E5E7EB;
+  --surface: #111827;
+  --app-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(17, 24, 39, 0.7);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans transition-colors duration-500 bg-app-bg text-app-text;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(34, 197, 94, 0.05) 0px, transparent 50%);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.03;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3排%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.glass {
+  @apply backdrop-blur-xl border border-app-border;
+  background-color: var(--glass-bg);
+}
+
+.glow-hover {
+  @apply transition-all duration-300;
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+  transform: translateY(-4px);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.section-padding {
+  @apply py-24 px-6 md:px-12 lg:px-24;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
+}
