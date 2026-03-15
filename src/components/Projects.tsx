@@ -6,7 +6,7 @@ const projects: Project[] = [
   {
     title: "Ethernote",
     description: "A decentralized note-taking platform that allows users to securely create, store, and manage .",
-    image: "./public/Ethernote.png",
+    image: "/Ethernote.png",
     tech: ["React", "TypeScript", "Canvas API"],
     liveUrl: "https://ethernote.vercel.app/",
     vercelUrl: "https://vercel.com",
@@ -14,7 +14,7 @@ const projects: Project[] = [
   {
     title: "QR Nest",
     description: "A simple web tool for generating and managing QR codes quickly and efficiently.",
-    image: "./public/QR Nest.png",
+    image: "/QR Nest.png",
     tech: ["React", "TypeScript", "Canvas API"],
     liveUrl: "https://qr-nest-app.vercel.app/",
     vercelUrl: "https://vercel.com",
@@ -22,7 +22,7 @@ const projects: Project[] = [
   {
     title: "Layout Lab",
     description: "A modern web tool for experimenting with and building responsive UI layouts.",
-    image: "./public/Layout Lab.png",
+    image: "/Layout Lab.png",
     tech: ["React", "Tailwind CSS", "LocalStorage"],
     liveUrl: "https://layout-lab-five.vercel.app/",
     vercelUrl: "https://vercel.com",
@@ -30,7 +30,7 @@ const projects: Project[] = [
   {
     title: "Crescent Connect",
     description: "A modern platform designed to connect students and share academic resources in an organized way.",
-    image: "./public/crescent connect.png",
+    image: "/crescent connect.png",
     tech: ["React", "Tailwind CSS", "Motion"],
     liveUrl: "https://vercel.com/abdul-kadar-imrans-projects/college-website",
     vercelUrl: "https://vercel.com",
@@ -38,7 +38,7 @@ const projects: Project[] = [
   {
     title: "T-Strike",
     description: "An interactive typing game designed to improve speed and accuracy through challenges.",
-    image: "./public/T-stike.png",
+    image: "/T-stike.png",
     tech: ["React", "Recharts", "Firebase"],
     liveUrl: "https://t-strike.vercel.app/",
     vercelUrl: "https://vercel.com",
@@ -46,7 +46,7 @@ const projects: Project[] = [
   {
     title: "Layerly",
     description: "A modern web application designed to organize and present layered content.",
-    image: "./public/Layerly App.png",
+    image: "/Layerly App.png",
     tech: ["React", "OpenWeather API", "Geolocation"],
     liveUrl: "https://layerly-app.vercel.app/",
     vercelUrl: "https://vercel.com",
